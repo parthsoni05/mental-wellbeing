@@ -15,7 +15,7 @@ class Admin(Base):
     department = Column(String, nullable=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
-    # relationships
+    # relationships, DB:1, You:0
     events = relationship("Event", back_populates="admin")
 
 
